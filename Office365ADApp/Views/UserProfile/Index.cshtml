@@ -1,0 +1,34 @@
+﻿@using Microsoft.Azure.ActiveDirectory.GraphClient
+@model User
+
+@{
+    ViewBag.Title = "User Profile";
+}
+<h2>@ViewBag.Title.</h2>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td>User Image</td>
+        <td><img src="@ViewBag.imageUrl" height="100" width="100" /></td>
+    </tr>
+    <tr>
+        <td>Display Name</td>
+        <td>@Model.DisplayName</td>
+    </tr>
+    <tr>
+        <td>First Name</td>
+        <td>@Model.GivenName</td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>@Model.Surname</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Model.Mail</td>
+    </tr>
+    <tr>
+        <td>Position</td>
+        <td>@Model.JobTitle</td>
+    </tr>
+</table>
